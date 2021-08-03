@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.Body-Header{
+    width: 100%;
+    height: 90vh;
+}
+.Text-Header{
+    position: relative;
+    text-align: center;
+    font-family: 'Lato';
+    width: 60%;
+    top: 10vh;
+    left: 20%;
+    font-size: max( 4vw, 15px);
+    color: white;
+}
+.Buttons-Header{
+    display: inline-flex;
+    width: 40%;
+    height: 9vh;
+    position: relative;
+    left: 30%;
+    top: 15vh;
+}
+.Buttons{
+    height: 9vh;
+    width: 50%;
+}
+#Btn-Explore{
+    font-family: 'Lato';
+    border: none;
+    height: 8vh;
+    background-color: royalblue;
+    top: .3vh;
+    border-radius: 10px;
+    width: 80%;
+    font-size: max(1vw, 15px);
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    position: relative;
+    left: 10%;
+}
+#Btn-Explore:hover{
+    background-color: rgb(47, 78, 168);
+    transition: 0.5s;
+}
+#Btn-Login{
+    font-family: 'Lato';
+    border: 1px solid royalblue;
+    height: 8vh;
+    top: .3vh;
+    border-radius: 10px;
+    width: 80%;
+    font-size: max(1vw, 15px);
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    position: relative;
+    left: 10%;
+}
+.Mini-Cards{
+    display: inline-flex;
+    position: relative;
+    width: 90%;
+    height: 35vh;
+    left: 5%;
+    top: 22vh;
+}
+.MiniCard-One{
+    background-color: transparent;
+    width: 13%;
+    border-radius: 10px;
+    border: 1px solid rgb(90,90,90);
+    height: 30vh;
+}
+.MiniCard-Two{
+    position: relative;
+    top: 5vh;
+    background-color: transparent;
+    left: 15%;
+    width: 13%;
+    border-radius: 10px;
+    border: 1px solid rgb(90,90,90);
+    height: 30vh;
+}
+.MiniCard-Three{
+    position: relative;
+    left: 35%;
+    width: 13%;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid rgb(90,90,90);
+    height: 30vh;
+}
+.MiniCard-Four{
+    position: relative;
+    top: 5vh;
+    left: 48%;
+    width: 13%;
+    border-radius: 10px;
+    background-color: transparent;
+    height: 30vh;
+    border: 1px solid rgb(90,90,90);
+}
+.Img-Cards{
+    position: relative;
+    left: 23%;
+    top: 4vh;
+    width: 60%;
+    background-color: transparent;
+}
+.Title-Card{
+    position: relative;
+    font-family: 'Lato';
+    font-size: max(1.1vw, 10px);
+    color: white;
+    text-align: center;
+    top: 8vh;
+}

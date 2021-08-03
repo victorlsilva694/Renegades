@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+.Footer{
+    width: 100%;
+    height: 15vh;
+}
+.Footer-Text{
+    text-align: center;
+    position: relative;
+    top: 5vh;
+    color: rgb(160, 160, 160);
+    font-size: max(1.3vw, 18px);
+    font-family: 'Poppins'; 
+}
