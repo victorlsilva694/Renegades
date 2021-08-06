@@ -1,29 +1,36 @@
 import './Login.css';
-import { Form, Button } from 'react-bootstrap'
+import { FloatingLabel, Form, Button } from 'react-bootstrap'
 
 function Login() {
     return (
-        <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-                <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                </Form.Text>
-            </Form.Group>
+        <div className="login-form">
+            <div className="brand">
+                <h1 className="renegades">Renegades</h1>
+            </div>
+            <br/>
+            <Form>
+                <Form.Group className="mb-3" controlId="formGroupEmail">
+                    <Form.Label id="label-form">Endereço de e-mail</Form.Label>
+                    <Form.Control type="email" id="input-flex" placeholder="Digite seu e-mail" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGroupPassword">
+                    <Form.Label id="label-form">Senha</Form.Label>
+                    <Form.Control type="password" id="input-flex" placeholder="Digite sua senha" />
+                </Form.Group>
+                <div className="recovery">
+                    <a className="link-recovery" href="http://localhost:3000/recovery">
+                        Esqueci minha senha
+                    </a>
+                    <a className="link-recovery register" href="http://localhost:3000/register">
+                        Criar minha conta
+                    </a>
+                </div>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-                Submit
-            </Button>
-        </Form>
-    )
+                <Button id="btn-primary" variant="primary">Entrar</Button>
+            </Form>
+        </div>
+    );
 }
+
 
 export default Login;

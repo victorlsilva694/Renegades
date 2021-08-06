@@ -6,7 +6,6 @@ import Footer from './Footer/Footer'
 import './index.css'
 
 function index() {
-
     return (
         <React.Fragment>
             <Header />
@@ -14,10 +13,7 @@ function index() {
             <Main />
             <Footer />
         </React.Fragment>
-        
-
     )
-
 }
 
 export default index;
