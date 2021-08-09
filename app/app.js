@@ -9,8 +9,9 @@ const flash = require('flash');
 
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(flash());
+//app.use(flash());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+
 
 module.exports = app;

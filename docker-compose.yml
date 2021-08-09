@@ -1,0 +1,17 @@
+version: "3"
+services:
+  front-end:
+    build: ./Front
+    ports:
+      - 1213:3000
+    volumes:
+      - ./Front:/home/front
+
+  back-end:
+    build: ./app
+    ports:
+      - 1214:3001
+    volumes:
+      - ./app:/home/back
+
+ 

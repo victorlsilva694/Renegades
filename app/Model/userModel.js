@@ -1,3 +1,5 @@
+
+/*
 const Sequelize  = require("sequelize");
 const Connection = require("../Schema/connection");
 
@@ -34,4 +36,4 @@ const UserModel = Connection.define('UserModel', {
 });
 
 UserModel.sync({force: false}).then(() => {});
-module.exports = UserModel;
+module.exports = UserModel;*/

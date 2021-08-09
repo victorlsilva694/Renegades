@@ -1,3 +1,4 @@
+
 const Sequelize = require('sequelize');
 
 const Connection = new Sequelize('Renegades', 'root', 'Victor123@#!', {
