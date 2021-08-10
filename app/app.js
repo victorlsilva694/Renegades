@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const index = require('./Controller/Routes');
 const passport = require('passport');
 const flash = require('flash');
+const Controller = require('./Controller/Routes')
 
 
 app.use(passport.initialize());
@@ -12,6 +13,6 @@ app.use(passport.session());
 //app.use(flash());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-
+app.use('/', Controller)
 
 module.exports = app;
