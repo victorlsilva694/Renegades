@@ -23,5 +23,9 @@
     "sequelize": "^6.6.5",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "pg": "^8.7.1"
   }
 }

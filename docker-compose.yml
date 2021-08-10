@@ -14,4 +14,19 @@ services:
     volumes:
       - ./app:/home/back
 
- 
+  db:
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=Renegades
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=Victor123@#!
+    ports:
+      - "1215:5432"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 1216:8080

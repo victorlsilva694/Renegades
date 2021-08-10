@@ -56,7 +56,13 @@
     font-weight: bolder;
     position: relative;
     left: 10%;
+} 
+
+#Btn-Login:hover{
+    background-color: rgb(47, 78, 168);
+    transition: 0.6s;
 }
+
 .Mini-Cards{
     display: inline-flex;
     position: relative;
