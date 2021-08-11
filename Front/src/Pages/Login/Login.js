@@ -4,7 +4,7 @@ import { FloatingLabel, Form, Button } from "react-bootstrap";
 
 function Login() {
   return (
-    <div className="login-form">
+    <div className="login-forms">
       <div className="brand">
         <h1 className="renegades">Renegades</h1>
       </div>
@@ -26,7 +26,7 @@ function Login() {
             placeholder="Digite sua senha"
           />
         </Form.Group>
-        <div className="recovery">
+        <div className="recoverys">
           <a className="link-recovery" href="http://localhost:1213/recovery">
             Esqueci minha senha
           </a>

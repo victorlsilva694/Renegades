@@ -5,7 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './Pages/Home/index';
 import Login from './Pages/Login/Login';
-import Register from './Pages/Register/Register'
+import Register from './Pages/Register/Register';
+import DashBoard from './Pages/Dashboard/DashBoard'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.render(
         <Route path="/" exact={true} component={Home}/>
         <Route path="/login" exact={true} component={Login}/>
         <Route path="/register" exact={true} component={Register}/>
+        <Route path="/DashBoard" exact={true} component={DashBoard}/>
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,

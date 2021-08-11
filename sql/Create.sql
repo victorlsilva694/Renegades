@@ -8,5 +8,3 @@ Create Table Users(
    Password varchar(200) not null,
    createdAt DATE NOT NULL DEFAULT CURRENT_DATE
 )
-
-

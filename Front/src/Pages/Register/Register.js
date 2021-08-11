@@ -2,6 +2,7 @@ import "./Register.css";
 import { useState } from "react";
 import { FloatingLabel, Form, Button, Col, Row } from "react-bootstrap";
 import axios from "axios";
+
 function Register() {
   const [collorButton, setCollorButton] = useState("primary");
   const [nome, setNome] = useState("");

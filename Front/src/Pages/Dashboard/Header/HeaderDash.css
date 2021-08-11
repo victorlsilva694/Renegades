@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@700&display=swap');
+
+.nav-bar{
+    display: flex;
+    width: 100%;
+    position: relative;
+    top: 1vh;
+    height: 70px;
+}
+#QuerySearch{
+    width: 40%;
+    height: 45px;
+    position: relative;
+    top: 12px;
+}
+.title-brand{
+    font-family: 'Monda';
+    font-size: max(2vw, 18px);
+    color: white;
+    position: relative;
+    top: 1.2vh;
+    background-color: transparent;
+    left: 2%;
+}
+.list-itens{
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    height: 70px;
+}
+.list-links{
+    display: flex;
+    list-style: none;
+}
+.links{
+    text-align: center;
+    position: relative;
+    top: 5px;
+    width: 25%;
+    height: 50px;
+    color: white;
+}
+.itens{
+    font-family: 'Poppins';
+    position: relative;
+    top: 2vh;
+    font-size: max(1vw, 18px);
+    color: white;
+    text-decoration: none;
+}
+.perfil-user{
+    display: flex;
+    position: absolute;
+    left: 70%;
+    width: 30%;
+    height: 70px;
+}
+.username{
+    left: 30%;
+    font-family: 'Poppins';
+    font-size: max(1.1vw, 15px);
+    position: absolute;
+    top: 23px;
+    color: white;
+}
+.img-user{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    left: 75%;
+    background-color: rgb(100, 100, 100);
+}

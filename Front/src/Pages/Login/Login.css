@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monda:wght@700&display=swap');
 
-.login-form{
+.login-forms{
     width: 30%;
     height: 60vh;
     position: relative;
@@ -29,7 +29,7 @@
 #label-form{
     color: white;
 }
-.recovery{
+.recoverys{
     display: flex;
     width: 100%;
     position: relative;
