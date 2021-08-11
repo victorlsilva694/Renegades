@@ -1,12 +1,7 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const bcrypt = require('bcrypt');
-const bodyParser = require('body-parser');
-const passport = require('passport');
-const UsersModel = require('../Model/userModel');
+const createUser = require("../routers/createUser");
 
-
-
-
+router.use("/api/User", createUser);
 
 module.exports = router;

@@ -56,7 +56,10 @@
     font-weight: bolder;
     position: relative;
     left: 10%;
-}
+} 
+
+
+
 .Mini-Cards{
     display: inline-flex;
     position: relative;
