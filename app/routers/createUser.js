@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     await bd.query(
-      `INSERT INTO Users(name,lastName,CPF,RG) VALUES ('${req.body.name}','${req.body.lastName}','${req.body.cpf}','${req.body.rg}')`
+      `INSERT INTO Users(name,lastName,CPF,RG,Email,Password) VALUES ('${req.body.name}','${req.body.lastName}','${req.body.cpf}','${req.body.rg}','${req.body.email}','${req.body.password}')`
     );
     res.status(201).send("Ok");
   } catch (err) {
