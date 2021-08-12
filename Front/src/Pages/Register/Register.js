@@ -1,6 +1,7 @@
 import "./Register.css";
 import { useState } from "react";
 import { FloatingLabel, Form, Button, Col, Row } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 
 function Register() {
@@ -11,6 +12,7 @@ function Register() {
   const [cpf, setCpf] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const history = useHistory();
 
   async function SendRegister() {
     const user = {
@@ -25,6 +27,8 @@ function Register() {
       const results = await axios.post("http://localhost:1214/api/User", user);
       if (results.status == 201) {
         setCollorButton("success");
+        history.push("/login")
+        
       }
     } catch (err) {
       console.error(err);

@@ -77,7 +77,6 @@ function Login() {
             Criar minha conta
           </a>
         </div>
-
         <Button id="btn-primary" variant={collorButton} onClick={Auth}>
           Entrar
         </Button>
