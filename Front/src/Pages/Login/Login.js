@@ -1,13 +1,13 @@
 import "./Login.css";
 import { FloatingLabel, Form, Button } from "react-bootstrap";
-import {Route} from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-import DashBoard from '../Dashboard/DashBoard'
 function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [collorButton, setCollorButton] = useState("primary");
+  const history = useHistory()
 
   async function Auth() {
     const resposta = await axios.post("http://localhost:1214/api/Login", {
@@ -17,22 +17,24 @@ function Login() {
     if (data === undefined) {
       alert("Email errado");
       setCollorButton("danger");
-    }else if(data !== undefined){
-      Verification(data)
+    } else if (data !== undefined) {
+      Verification(data);
     }
   }
 
   function Verification(info) {
-   if (senha != info.password) {
+    const nome = `${info.name} ${info.lastname}`
+   
+    if (senha != info.password) {
       alert("Senha errada");
       setCollorButton("danger");
     } else if (email == info.email && senha == info.password) {
       alert("Login feito");
       setCollorButton("success");
-      <Route path="/DashBoard" exact={true} component={DashBoard}/>
-      
+      sessionStorage.setItem('nome',nome)
+      history.push("/DashBoard")
+    
     }
-
   }
 
   return (

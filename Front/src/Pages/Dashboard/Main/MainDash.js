@@ -3,6 +3,8 @@ import { Button, Container, Row, Col } from 'react-bootstrap';
 import youtube from './Images/youtube.png'
 
 function HeaderDash() {
+    const nome = sessionStorage.getItem('nome');
+
     return (
         <div className="Container-Main">
             <div className="Session-One">
@@ -19,7 +21,7 @@ function HeaderDash() {
 
                 <div className="Profile-Analysis">
                     <h1 className="Title-container-Profile">Crie sua playlist agora!</h1>
-                    <p className="Paragraph-Profile"> Bem vindo de volta <strong>Nome de usuario!</strong> Crie sua nova playlist agora clicando no botão abaixo! </p>
+                    <p className="Paragraph-Profile"> Bem vindo de volta {nome} Crie sua nova playlist agora clicando no botão abaixo! </p>
                     <Button id="Button-Paragraph" variant="primary">Criar nova playlist</Button>{' '}
 
                     <div className="youtube-brand">
@@ -60,7 +62,7 @@ function HeaderDash() {
 
                         <div className="flex-containerProfile">
                             <div className="Containerimg-user"></div>
-                            <h1 className="NameText">Nome <br /> <span className="LastName-txt">Sobrenome completo</span></h1>
+                            <h1 className="NameText">{nome} <br /> <span className="LastName-txt">Sobrenome completo</span></h1>
                         </div>
                         <h1 className="Text-Status">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer</h1>
                     </div>
