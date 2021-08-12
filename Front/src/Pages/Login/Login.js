@@ -1,21 +1,56 @@
 import "./Login.css";
 import { FloatingLabel, Form, Button } from "react-bootstrap";
-
-
+import {Route} from 'react-router-dom';
+import { useState } from "react";
+import axios from "axios";
+import DashBoard from '../Dashboard/DashBoard'
 function Login() {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [collorButton, setCollorButton] = useState("primary");
+
+  async function Auth() {
+    const resposta = await axios.post("http://localhost:1214/api/Login", {
+      email: email,
+    });
+    const data = await resposta.data[0];
+    if (data === undefined) {
+      alert("Email errado");
+      setCollorButton("danger");
+    }else if(data !== undefined){
+      Verification(data)
+    }
+  }
+
+  function Verification(info) {
+   if (senha != info.password) {
+      alert("Senha errada");
+      setCollorButton("danger");
+    } else if (email == info.email && senha == info.password) {
+      alert("Login feito");
+      setCollorButton("success");
+      <Route path="/DashBoard" exact={true} component={DashBoard}/>
+      
+    }
+
+  }
+
   return (
     <div className="login-forms">
       <div className="brand">
         <h1 className="renegades">Renegades</h1>
       </div>
       <br />
-      <Form>
+      <Form onSubmit={""}>
         <Form.Group className="mb-3" controlId="formGroupEmail">
           <Form.Label id="label-form">Endereço de e-mail</Form.Label>
           <Form.Control
             type="email"
             id="input-flex"
             placeholder="Digite seu e-mail"
+            onChange={({ ...e }) => {
+              setEmail(e.target.value);
+            }}
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formGroupPassword">
@@ -24,6 +59,9 @@ function Login() {
             type="password"
             id="input-flex"
             placeholder="Digite sua senha"
+            onChange={({ ...e }) => {
+              setSenha(e.target.value);
+            }}
           />
         </Form.Group>
         <div className="recoverys">
@@ -38,7 +76,7 @@ function Login() {
           </a>
         </div>
 
-        <Button id="btn-primary" variant="primary">
+        <Button id="btn-primary" variant={collorButton} onClick={Auth}>
           Entrar
         </Button>
       </Form>
