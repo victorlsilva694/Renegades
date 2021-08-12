@@ -89,7 +89,7 @@
     background-color: transparent;
     color: #b3c2dd;
     position: relative;
-    left: 5%;
+    left: 8%;
     top: 7vh;
     font-family: 'Monda';
     font-size: max(2vw, 15px);
@@ -97,16 +97,16 @@
 .Paragraph-Profile{
     width: 38%;
     position: relative;
-    left: 5%;
+    left: 8%;
     font-size: max(1vw, 15px);
-    top: 8vh;
+    top: 8.5vh;
     background-color: transparent;
     color: #e1e7f1;
 }
 #Button-Paragraph{
     width: 38%;
     position: relative;
-    left: 5%;
+    left: 8%;
     top: 9vh;
     height: 50px;
 }
@@ -121,7 +121,153 @@
 .brand-YT{
     position: relative;
     left: 20%;
-    top: 3vh;
-    width: 55%;
+    top: 1.8vh;
+    width: 58%;
     background-color: transparent;
+}
+strong{
+    background-color: transparent;
+}
+.card{
+    position: relative;
+    width: 90%;
+    left: 5%;
+    height: 26vh;
+    top: 2vh;
+    border: none;
+    background-color: transparent;
+}
+#column-dashed{
+    border-style: dashed;
+    border-color: rgb(156, 156, 156);
+    top: -1vh;
+    border-radius: 10px;
+    position: relative;
+    width: 25%;
+    margin: 5px;
+    background-color: transparent;
+    height: 26vh;
+}
+#column{
+    border: 1px solid rgb(95, 95, 95);
+    top: -1vh;
+    border-radius: 10px;
+    position: relative;
+    width: 25%;
+    margin: 5px;
+    background-color: transparent;
+    height: 26vh;
+}
+#container{
+    border: none;
+    background-color: transparent;
+}
+#grid{
+    border: none;
+    background-color: transparent;
+}
+.New-Playlist{
+    background-color: transparent;
+    top: 2vh;
+    position: relative;
+    font-size: max(.9vw, 10px);
+    color: rgb(216, 216, 216);
+    text-align: center;
+    font-family: 'Poppins';
+}
+.AddNew{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    border-radius: 10px;
+    background-color: transparent;
+    top: 4vh;
+    height: 10vh;
+    border: 1px solid rgb(114, 114, 114);
+}
+.Plus{
+    position: absolute;
+    font-size: max(5vw, 15px);
+    color: white;
+    top: -2.5vh;
+    left: 20%;
+    background-color: transparent;
+}
+.Containerimg-user{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
+    background-color: rgb(114, 114, 114);
+}
+.flex-containerProfile{
+    display: flex;
+    width: 80%;
+    height: 14vh;
+    top: 1vh;
+    position: relative;
+    left: 10%;
+    background-color: transparent;
+}
+.NameText{
+    position: relative;
+    left: 5%;
+    top: 3vh;
+    color: white;
+    background-color: transparent;
+    font-size: max(1.3vw, 10px);
+    font-family: 'Poppins';
+}
+.LastName-Txt{
+    position: absolute;
+    top: 5vh;
+    color: white;
+    background-color: transparent;
+    font-size: max(1.1vw, 10px);
+    font-family: 'Poppins';
+    left: 0;
+}
+.Text-Status{
+    position: absolute;
+    top: 16vh;
+    color: white;
+    background-color: transparent;
+    font-size: max(.9vw, 10px);
+    left: 10%;
+    width: 80%;
+    font-family: 'Poppins';
+}
+.LastName-txt{
+    position: relative;
+    top: .5vh;
+    color: white;
+    background-color: transparent;
+    font-size: max(1.1vw, 10px);
+    font-family: 'Poppins';
+}
+.AddNew-Plus{
+    position: relative;
+    top: 20vh;
+    background-color: transparent;
+    border-radius: 20px;
+    width: 40%;
+    left: 30%;
+    height: 25vh;
+    border: 1px solid rgb(146, 146, 146);
+}
+.Plus-Playlist{
+    position: absolute;
+    font-size: max(10vw, 15px);
+    color: white;
+    top: -2.5vh;
+    left: 25%;
+    background-color: transparent;
+}
+.Title-play{
+    background-color: transparent;
+    color: white;
+    font-size: max(1.5vw, 15px);
+    text-align: center;
+    position: relative;
+    top: 5vh;
 }
