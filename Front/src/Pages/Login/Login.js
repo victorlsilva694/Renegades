@@ -3,17 +3,18 @@ import { FloatingLabel, Form, Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+
 function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [collorButton, setCollorButton] = useState("primary");
-  const history = useHistory()
+  const history = useHistory();
 
   async function Auth() {
     const resposta = await axios.post("http://localhost:1214/api/Login", {
       email: email,
     });
-    const data = await resposta.data[0];
+    const data = await resposta.data;
     if (data === undefined) {
       alert("Email errado");
       setCollorButton("danger");
@@ -22,19 +23,20 @@ function Login() {
     }
   }
 
-  function Verification(info) {
-    const nome = `${info.name} ${info.lastname}`
-   
-    if (senha != info.password) {
+  async function Verification(info) {
+    const nome = `${info.name} ${info.lastname}`;
+    const verificarSenha = await axios.post("http://localhost:1214/api/Auth", {senhaUser : senha, email: email})
+    const respostaSenha = verificarSenha.data
+    if (respostaSenha === false) {
       alert("Senha errada");
       setCollorButton("danger");
-    } else if (email == info.email && senha == info.password) {
+    } else if (email == info.email && respostaSenha === true) {
       alert("Login feito");
       setCollorButton("success");
-      sessionStorage.setItem('nome',nome)
-      history.push("/DashBoard")
-    
+      sessionStorage.setItem("nome", nome);
+      history.push("/DashBoard");
     }
+    
   }
 
   return (
@@ -43,7 +45,7 @@ function Login() {
         <h1 className="renegades">Renegades</h1>
       </div>
       <br />
-      <Form onSubmit={""}>
+      <Form>
         <Form.Group className="mb-3" controlId="formGroupEmail">
           <Form.Label id="label-form">Endereço de e-mail</Form.Label>
           <Form.Control

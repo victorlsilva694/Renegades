@@ -22,7 +22,14 @@ router.post("/", async (req, res) => {
     await bd.query(
       `SELECT * FROM Users WHERE email = '${req.body.email}'`,
       (err, result) => {
-        res.send(result.rows);
+        const user = {
+          email: result.rows[0].email,
+          password: result.rows[0].password,
+          name: result.rows[0].name,
+          lastname: result.rows[0].lastname,
+        };
+
+        res.send(user);
       }
     );
   } catch (err) {}
