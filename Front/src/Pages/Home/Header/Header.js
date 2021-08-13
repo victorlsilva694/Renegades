@@ -21,7 +21,7 @@ function Header() {
                         </NavDropdown>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets">Entrar agora </Nav.Link>
+                        <Nav.Link href="http://localhost:1213/login">Entrar agora </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
