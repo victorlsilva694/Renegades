@@ -5,7 +5,21 @@ const bd = require("../Schema/connection");
 router.get("/", function (req, res) {
   try {
     bd.query("SELECT * FROM Users", (err, result) => {
-      res.send(result.rows);
+      const resultado = result.rows;
+      const array = [];
+      
+      resultado.forEach( (valores) => {
+        const user = {
+          nome: valores.name,
+          sobrenome: valores.lastname,
+          email: valores.email,
+          senha: valores.password,
+        }
+        array.push(user);
+        
+      })
+
+      res.send(array);
     });
   } catch (err) {}
 });
