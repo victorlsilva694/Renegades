@@ -6,7 +6,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './Pages/Home/index';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
-import DashBoard from './Pages/Dashboard/DashBoard'
+import DashBoard from './Pages/Dashboard/DashBoard';
+import Games from './Pages/Games/games'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.render(
         <Route path="/login" exact={true} component={Login}/>
         <Route path="/register" exact={true} component={Register}/>
         <Route path="/DashBoard" exact={true} component={DashBoard}/>
+        <Route path="/DashBoard/Games" exact={true} component={Games}/>
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,

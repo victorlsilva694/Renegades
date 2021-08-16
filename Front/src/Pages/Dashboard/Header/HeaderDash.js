@@ -10,7 +10,7 @@ function HeaderDash() {
             <div className="list-itens">
                 <ul className="list-links">
                     <li className="links">
-                        <a className="itens" href="#">Jogos</a>
+                        <a className="itens" href="http://localhost:1213/DashBoard/Games">Jogos</a>
                     </li>
                     <li className="links">
                         <a className="itens" href="#">Músicas</a>

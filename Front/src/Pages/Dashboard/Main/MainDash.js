@@ -2,7 +2,7 @@ import './MainDash.css';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import itunes from './Images/itunes.png';
 import leftArrow from './Images/left-arrow.png';
-import rightarrow from './Images/right-arrow.png'
+import rightarrow from './Images/right-arrow.png';
 
 function HeaderDash() {
 
@@ -17,7 +17,7 @@ function HeaderDash() {
                             <h1 className="Session-Name">Estatísticas gerais</h1>
                         </li>
                         <li className="Button-session">
-                            <Button id="Button-Box" variant="primary">Meu Perfil</Button>{''}
+                            <Button id="Button-Box" variant="primary">Meu Perfil</Button>
                         </li>
                     </ul>
                 </div>
@@ -72,70 +72,36 @@ function HeaderDash() {
             </div>
 
             <div className="Favorites-Play">
-                <h1 className="Title-play">Vídeos em alta</h1>
+                <h1 className="Title-play">Top 5 músicas em alta</h1>
 
                 <div className="container-video">
-
-                    <div className="Arrow-1">
-                        <img className="img-Arrow" onClick={ChangePlayer} id="backplay-one" src={leftArrow} />
-                    </div>
-                    <div className="Arrow-2">
-                        <img className="img-Arrow" id="backplay-two" src={rightarrow} />
-                    </div>
-
                     <div className="video-1">
-                        <iframe id="play-One" src="https://www.youtube.com/embed/6HsyjH6VmAI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KwM4yOwMls4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div className="container-video-2">
-                    <div className="Arrow-1">
-                        <img className="img-Arrow" src={leftArrow} />
-                    </div>
-                    <div className="Arrow-2">
-                        <img className="img-Arrow" src={rightarrow} />
-                    </div>
                     <div className="video-2">
-                        <iframe id="play-Two" src="https://www.youtube.com/embed/i5MH9m6x3O0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5Eba0iXfiw8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div className="container-video-3">
+                    <div className="video-2">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2_xBCeBmaS8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div className="container-video-4">
+                    <div className="video-2">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/opl6FRB3ZXE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div className="container-video-5">
+                    <div className="video-2">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8XRKJtBUev8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
     )
 }
-
-const backplayone = {
-    "VideoOne": 1,
-    "VideoTwo": 2,
-    "VideoThree": 3,
-    "VideoFour": 4,
-    "VideoFive": 5
-}
-
-let backplay_One = document.querySelector("#backplay-one");
-let playOne = document.querySelector("#play-One");
-let k = 1
-function ChangePlayer() {
-    if (k == backplayone.VideoOne) {
-        console.log(k + ' = ' + backplayone.VideoOne)
-        k += 1
-    }
-    else if (k == backplayone.VideoTwo) {
-        console.log(k + ' = ' + backplayone.VideoTwo)
-        k += 1
-    }
-    else if (k == backplayone.VideoThree) {
-        console.log(k + ' = ' + backplayone.VideoThree)
-        k += 1
-    }
-    else if (k == backplayone.VideoFour) {
-        console.log(k + ' = ' + backplayone.VideoFour)
-        k += 1
-    }
-    else if (k == backplayone.VideoFive) {
-        console.log(k + ' = ' + backplayone.VideoFive)
-        k += 1
-    }
-}
-
 
 export default HeaderDash;
