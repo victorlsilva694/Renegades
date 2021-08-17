@@ -1,0 +1,161 @@
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 10px rgb(0,0,0.0.25)
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: rgb(31, 31, 31);
+}
+.nav-bar{
+    display: flex;
+    width: 100%;
+    height: 9vh;
+}
+#AddNew-Video{
+    background-color: rgb(0, 111, 223);
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 500;
+    left: 75%;
+    border-radius: 5px;
+    position: relative;
+    width: 10%;
+    border: none;
+    font-size: max(.9vw, 10px);
+    height: 50px;
+    top: 10px;
+}
+.title-brand{
+    font-family: 'Monda';
+    font-size: max(2vw, 18px);
+    color: white;
+    position: relative;
+    top: 1.2vh;
+    background-color: transparent;
+    left: 2%;
+}
+.Insert-Video{
+    overflow-y: scroll;
+
+    position: relative;
+    width: 30%;
+    background-color: rgb(55,55,60);
+    height: 80vh;
+    border-radius: 20px;
+    left: 2.5%;
+}
+.Container-Main{
+    width: 100%;
+    top: 5vh;
+    height: 80vh;
+    display: flex;
+}
+.Container-Start{
+    background-color: transparent;
+    width: 80%;
+    position: relative;
+    border-radius: 10px;
+    left: 10%;
+    height: 80vh;
+}
+.Title-URL{
+    background-color: transparent;
+    color: white;
+    font-family: 'Poppins';
+    font-size: max(1.2vw, 15px);
+    text-align: center;
+    position: relative;
+    top: 3vh;
+}
+.Insert-URL{
+    width: 90%;
+    left: 5%;
+    top: 5vh;
+    position: relative;
+    height: 8vh;
+    border-radius: 5px;
+    background-color: white;
+    font-family: 'Poppins';
+    color: black;
+    border: none;
+}
+.Insert-URL:focus{
+    border: none;
+}
+.search{
+    position: absolute;
+    top: 9vh;
+    left: 80%;
+    width: 60px;
+    height: 8vh;
+    background-color: transparent;
+}
+.search-img{
+    width:  60%;
+    position: relative;
+    top: 20%;
+    background-color: transparent;
+}
+.Line-1{
+    display: flex;
+    width: 90%;
+    left: 5%;
+    height: 35vh;
+    position: relative;
+    top: 2.5vh;
+}
+.Line-2{
+    display: flex;
+    width: 90%;
+    left: 5%;
+    height: 35vh;
+    position: relative;
+    top: 7.5vh;
+}
+.Coluna-1{
+    width: 25%;
+    background-color: transparent;
+}
+.Coluna-2{
+    width: 25%;
+    background-color: transparent;
+}
+.Coluna-3{
+    width: 25%;
+    background-color: transparent;
+}
+.Coluna-4{
+    width: 25%;
+    background-color: transparent;
+}
+#VideoInitial{
+    border-radius: 30px;
+}
+#Modal{
+    display: none;
+    background-color: white;
+    position: absolute;
+    top: 5vh;
+    left: 38%;
+}
+#FormInput{
+    width: 400px;
+    background-color: white;
+}
+#Header{
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+#body-Modal{
+    background-color: white;
+
+}
+.ModalFooter{
+    background-color: white;
+}
+#Title-modal{
+    background-color: white;
+}
