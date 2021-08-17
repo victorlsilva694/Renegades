@@ -1,20 +1,20 @@
-const { Pool } = require("pg");
-const pool = new Pool({
-  user: "root",
-  host: "db",
-  database: "Renegades",
-  password: "Victor123@#!",
-  port: 5432,
-});
+const Sequelaize = require('sequelize')
+const sequelize = new Sequelaize('Renegades','root','Victor123@#!',{
+  dialect: 'postgres',
+  host: 'db'
+})
 
-async function teste() {
+async function auth (){
   try {
-    pool.connect();
-    console.log("Banco tá on Pai");
-  } catch (err) {
-    console.error("Banco tá of Pai", err);
+    await sequelize.authenticate()
+    await sequelize.sync()
+    console.log('Banco tá on pelo sequelize')
+  } catch (err){
+    console.error('Deu error no sequelize', err)
   }
 }
 
-teste();
-module.exports = pool;
+auth()
+
+
+module.exports = sequelize;

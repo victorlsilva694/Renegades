@@ -1,26 +1,24 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
-const bd = require("../Schema/connection");
+const User = require("../Model/userModel");
 
 router.post("/", async (req, res) => {
   const senha = req.body.senhaUser;
   try {
-    await bd.query(
-      `SELECT * FROM Users WHERE email = '${req.body.email}'`,
-      async (err, result) => {
-        const veridico = await bcrypt.compareSync(
-          senha,
-          result.rows[0].password
-        );
-        if (veridico) {
-          res.send(true);
-        } else {
-          res.send(false);
-        }
-      }
-    );
-  } catch (err) {}
+    const user = await User.findOne({
+      where: {
+        email: req.body.email,
+      },
+    });
+    if (await user == null) {
+      res.status(400).send("Email not found");
+    }
+    const veridico = await bcrypt.compareSync(senha,user.senha)
+    res.send(veridico);
+  } catch (err) {
+    res.send(err)
+  }
 });
 
 module.exports = router;

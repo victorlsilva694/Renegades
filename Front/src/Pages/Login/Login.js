@@ -24,9 +24,12 @@ function Login() {
   }
 
   async function Verification(info) {
-    const nome = `${info.name} ${info.lastname}`;
-    const verificarSenha = await axios.post("http://localhost:1214/api/Auth", { senhaUser: senha, email: email })
-    const respostaSenha = verificarSenha.data
+    const nome = `${info.nome} ${info.lastName}`;
+    const verificarSenha = await axios.post("http://localhost:1214/api/Auth", {
+      senhaUser: senha,
+      email: email,
+    });
+    const respostaSenha = verificarSenha.data;
     if (respostaSenha === false) {
       alert("Senha errada");
       setCollorButton("danger");
@@ -36,7 +39,6 @@ function Login() {
       sessionStorage.setItem("nome", nome);
       history.push("/DashBoard");
     }
-
   }
 
   return (
